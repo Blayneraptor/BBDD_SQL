@@ -3,22 +3,27 @@
 # Para el ejercicio de DML_Database_EMPLEADOS2.Se adjunta el DDL al final de este README y se insertan estos valores:
 
 delegaciones
-('08000','D.BARCELONA','Rambla, 24')
-('21000','D.HUELVA','Gamba, 4')
-('23000','D.JAEN','Aceituna, 9')
-('28000','D.MADRID','Mayor, 10')
-('41000','D.SEVILLA','Flamencos, 4')
+| cod_postal | nombre       | direccion       |
+|------------|--------------|-----------------|
+| 08000      | D.BARCELONA  | Rambla, 24     |
+| 21000      | D.HUELVA     | Gamba, 4       |
+| 23000      | D.JAEN       | Aceituna, 9    |
+| 28000      | D.MADRID     | Mayor, 10      |
+| 41000      | D.SEVILLA    | Flamencos, 4   |
 departamentos
-('D0108','DEP BARCELONA 01','08000','EMP01',81000.00,NULL)
-('D0121','DEP HUELVA 01','21000','EMP13',125000.00,NULL)
-('D0123','DEP JAEN 01','23000','EMP18',123000.00,NULL)
-('D0128','DEP MADRID 01','28000','EMP05',281000.00,NULL)
-('D0141','DEP SEVILLA 01','41000','EMP09',185000.00,NULL)
-('D0208','DEP BARCELONA 02','08000','EMP02',82000.00,'D0108')
-('D0221','DEP HUELVA 02','21000','EMP14',171000.00,'D0121')
-('D0223','DEP JAEN 02','23000','EMP19',161000.00,'D0123')
-('D0228','DEP MADRID 02','28000','EMP06',282000.00,'D0128')
-('D0241','DEP SEVILLA 02','41000','EMP10',183000.00,'D0141')
+| cod_departamento | nombre         | cod_postal | cod_empleado | salario    | cod_departamento_padre |
+|------------------|----------------|------------|--------------|------------|------------------------|
+| D0108            | DEP BARCELONA  | 08000      | EMP01        | 81000.00   | NULL                   |
+| D0121            | DEP HUELVA     | 21000      | EMP13        | 125000.00  | NULL                   |
+| D0123            | DEP JAEN       | 23000      | EMP18        | 123000.00  | NULL                   |
+| D0128            | DEP MADRID     | 28000      | EMP05        | 281000.00  | NULL                   |
+| D0141            | DEP SEVILLA    | 41000      | EMP09        | 185000.00  | NULL                   |
+| D0208            | DEP BARCELONA  | 08000      | EMP02        | 82000.00   | D0108                  |
+| D0221            | DEP HUELVA     | 21000      | EMP14        | 171000.00  | D0121                  |
+| D0223            | DEP JAEN       | 23000      | EMP19        | 161000.00  | D0123                  |
+| D0228            | DEP MADRID     | 28000      | EMP06        | 282000.00  | D0128                  |
+| D0241            | DEP SEVILLA    | 41000      | EMP10        | 183000.00  | D0141                  |
+
 empleados
 ('EMP01','LUIS','Calle dir, 1','080','11111111','1980-01-01','2010-01-01','40000.00', '0','D0108')
 ('EMP02','MARIA','Calle dir, 2','080','22222222','1983-01-01','2008-02-01','45000.00', '2','D0208')

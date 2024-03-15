@@ -1,1 +1,1 @@
-## Ejercicios de programación Java realizados durante el curso
+## Ejercicios de Base de datos realizados durante el curso

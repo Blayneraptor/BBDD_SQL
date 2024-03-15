@@ -1,5 +1,7 @@
 ## Objetivo: Consultar la información almacenada en una base de datos relacional empleando el lenguaje de manipulación de datos.
 
+```sql
+
 Partimos de la BD de empleados que se adjunta, en la que deseamos realizar las siguientes consultas:
 Calcula el salario medio de los empleados del departamento 20 de la tabla EMPLEADOS.
 Cuenta cuántos registros la tabla EMPLEADOS.
@@ -17,7 +19,7 @@ Obtén el nombre de los empleados que empiecen por la letra ‘A’ y que tengan
 
 ## BASE DE DATOS A USAR PARA HACER EL DML.
 
-```sql
+
 CREATE DATABASE empleados1;
 
 USE empleados1;

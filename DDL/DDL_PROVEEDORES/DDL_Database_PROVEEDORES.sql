@@ -3,23 +3,23 @@ CREATE DATABASE empresa;
 USE empresa;
 
 CREATE TABLE Proveedores (
-    ID_Proveedor VARCHAR(20),
-    Nombre VARCHAR(20),
-    Direccion VARCHAR(50),
-    Provincia VARCHAR(10),
-    Ciudad VARCHAR(20)
+    ID_Proveedor VARCHAR(20) NOT NULL,
+    Nombre VARCHAR(20) NOT NULL,
+    Direccion VARCHAR(50) NOT NULL,
+    Provincia VARCHAR(10) NOT NULL,
+    Ciudad VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE Piezas (
-    ID_Pieza VARCHAR(20),
-    Nombre VARCHAR(20),
-    Color VARCHAR(20),
-    Precio INT(6)
+    ID_Pieza VARCHAR(20) NOT NULL,
+    Nombre VARCHAR(20) NOT NULL,
+    Color VARCHAR(20) NOT NULL,
+    Precio INT(6) NOT NULL
 );
 
 CREATE TABLE Categorias (
-    ID_Categoria VARCHAR(20),
-    Nombre VARCHAR(20)
+    ID_Categoria VARCHAR(20) NOT NULL,
+    Nombre VARCHAR(20) NOT NULL
 );
 
 ALTER TABLE Proveedores 

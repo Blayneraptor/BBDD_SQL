@@ -1,2 +1,1 @@
-# BBDD_SQL
-Ejercicios realizados en 1º DAM Base de datos
+## Ejercicios de programación Java realizados durante el curso

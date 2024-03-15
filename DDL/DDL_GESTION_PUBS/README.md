@@ -16,9 +16,9 @@ Las claves primarias vienen marcadas con el símbolo #
 Contempla las opciones necesarias para mantener la integridad referencial, creando las claves foráneas necesarias
 Para desarrollar la actividad de forma organizada, procede como sigue:
 
-1.       Crea la base de datos y la activas
+1. Crea la base de datos y la activas
 
-2.       Crea las tablas con sus claves primarias
+2. Crea las tablas con sus claves primarias
 
-3.       Crea las claves foráneas.
+3. Crea las claves foráneas.
 

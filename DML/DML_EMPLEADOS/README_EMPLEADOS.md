@@ -15,7 +15,7 @@ Calcula el número de departamentos que hay en la tabla EMPLEADOS. Después,  ca
 A partir de la tabla EMPLEADOS, visualiza cuántos apellidos empiezan por la letra ‘A’.
 Obtén el nombre de los empleados que empiecen por la letra ‘A’ y que tengan máximo salario (de los que empiezan por la letra ‘A’).
 
-##BASE DE DATOS A USAR PARA HACER EL DML.
+## BASE DE DATOS A USAR PARA HACER EL DML.
 
 CREATE DATABASE empleados1;
 

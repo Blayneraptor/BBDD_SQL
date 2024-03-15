@@ -4,7 +4,7 @@
 ![Imagen de la base de datos](https://github.com/Blayneraptor/BBDD_SQL/blob/main/DQL/DQL_TIENDA_INFORMATICA/DQLTIENDA.png)
 
 
-## Usa la siguiente tabla de DDL creada.
+## Usa la siguiente tabla de DDL,DML creada.
 
 ```sql
 CREATE DATABASE IF NOT EXISTS tienda CHARACTER SET utf8mb4;

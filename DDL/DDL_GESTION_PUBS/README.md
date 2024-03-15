@@ -2,7 +2,7 @@
 
 ##Necesitamos diseñar la siguiente base de datos de pubs, para gestionar la información dichos pubs
 
-![Imagen de la base de datos](URL de la imagen)
+![Imagen de la base de datos](https://github.com/Blayneraptor/BBDD_SQL/blob/main/DDL/DDL_GESTION_PUBS/DDLPUBS.png)
 
 
 Se pide escribir los comandos SQL que permitan la creación de las tablas anteriores teniendo en cuenta las siguientes restricciones:

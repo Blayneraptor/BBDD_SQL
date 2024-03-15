@@ -6,6 +6,7 @@
 
 ## Usa la siguiente tabla de DDL creada.
 
+```sql
 CREATE DATABASE IF NOT EXISTS tienda CHARACTER SET utf8mb4;
 USE tienda;
 
@@ -43,6 +44,7 @@ INSERT INTO producto VALUES(8, 'Portátil Yoga 520', 559, 2);
 INSERT INTO producto VALUES(9, 'Portátil Ideapd 320', 444, 2);
 INSERT INTO producto VALUES(10, 'Impresora HP Deskjet 3720', 59.99, 3);
 INSERT INTO producto VALUES(11, 'Impresora HP Laserjet Pro M26nw', 180, 3);
+
 
 ## Realizar los siguientes ejercicios.
 

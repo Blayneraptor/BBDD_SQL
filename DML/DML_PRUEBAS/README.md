@@ -2,6 +2,7 @@
 
 Crear una BD que se denominará pruebas y en ella realizar los siguientes pasos.
 
+```sql
 A) Crear la tabla agenda con los siguientes campos:
 apellido (cadena de 30 máximo)
 nombre (cadena de 20 máximo)
@@ -14,6 +15,7 @@ B) Insertar los siguientes registros:
 ('LOPEZ','MARIA','URQUIZA 333',454545445, '+0047')
 ('LOPEZ','JOSE','URQUIZA 333', 423456798);
 ('SALAS','SUSANA','GRAL. PAZ 1234',412345612, '+0036');
+
 C) Diversos procesos DML:
 Actualizar el registro cuyo nombre sea "JUAN" por "JOSE"
 Eliminar los registros cuyo número telefónico sea igual a 423456798.

@@ -17,6 +17,7 @@ Obtén el nombre de los empleados que empiecen por la letra ‘A’ y que tengan
 
 ## BASE DE DATOS A USAR PARA HACER EL DML.
 
+```sql
 CREATE DATABASE empleados1;
 
 USE empleados1;

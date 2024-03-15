@@ -1,4 +1,4 @@
-##Objetivo: Modificar la información almacenada en una base de datos relacional empleando el lenguaje de manipulación de datos.
+## Objetivo: Modificar la información almacenada en una base de datos relacional empleando el lenguaje de manipulación de datos.
 
 Crear una BD que se denominará pruebas y en ella realizar los siguientes pasos.
 

@@ -1,5 +1,6 @@
 # Base de datos Pedidos.
 
+## Actualizar base de datos.
 
 ![Imagen de la base de datos](https://github.com/Blayneraptor/BBDD_SQL/blob/main/DML/DML_PEDIDOS/DMLPEDIDOS.png)
 

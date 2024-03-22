@@ -2,8 +2,8 @@
 
 
 ```sql
-CREATE DATABASE IF NOT EXISTS pruebas;
-USE pruebas;
+CREATE DATABASE IF NOT EXISTS usuarios;
+USE usuarios;
 
 CREATE TABLE tblUsuarios (
    idx INT PRIMARY KEY AUTO_INCREMENT,
@@ -14,7 +14,7 @@ CREATE TABLE tblUsuarios (
    email VARCHAR(50),
    telefono VARCHAR(20),
    marca VARCHAR(20),
-   compañia VARCHAR(20),
+   compania VARCHAR(20),
    saldo FLOAT,
    activo BOOLEAN
 );

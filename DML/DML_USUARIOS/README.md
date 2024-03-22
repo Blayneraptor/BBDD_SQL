@@ -1,5 +1,6 @@
 ## Copia las siguientes dos líneas para hacer las consultas en la BD.
 
+```sql
 CREATE DATABASE IF NOT EXISTS pruebas;
 USE pruebas;
 

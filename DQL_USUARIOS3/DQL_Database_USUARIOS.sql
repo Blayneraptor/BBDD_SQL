@@ -41,7 +41,31 @@ FROM tblusuarios
 WHERE compania = "AT&T";
 
 -- 8. Listar las diferentes compañías en orden alfabético descendente
+
+SELECT DISTINCT compania
+FROM tblusuarios
+ORDER BY compania desc;
+
 -- 9. Listar el login de los usuarios inactivos
+
+SELECT usuario as UsuariosInactivos
+FROM tblusuarios
+WHERE activo=0;
+
 -- 10. Listar los números de teléfono sin saldo
+
+SELECT telefono as TelfSaldo0
+FROM tblusuarios
+WHERE saldo=0;
+
 -- 11. Calcular el saldo mínimo de los usuarios de sexo “Hombre”
+
+SELECT MIN(saldo) as SaldoMin 
+FROM tblusuarios
+WHERE sexo = "H";
+
 -- 12. Listar los números de teléfono con saldo mayor a 300
+
+SELECT telefono
+FROM tblusuarios
+WHERE saldo>300;

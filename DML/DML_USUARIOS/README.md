@@ -1,5 +1,6 @@
 ## Copia las siguientes dos líneas para hacer las consultas en la BD.
 
+
 ```sql
 CREATE DATABASE IF NOT EXISTS pruebas;
 USE pruebas;
@@ -42,7 +43,7 @@ VALUES
 ('20','LUI1076','LUIS','H','3','luis2@live.com','655-100-5085','SONY','UNEFON','150','1'),
 ('21','HUG5441','HUGO','H','2','hugo@live.com','655-137-3935','MOTOROLA','AT&T','500','1');
 
-´´´sql
+```
 
 
 ## Haz estas consultas

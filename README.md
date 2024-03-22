@@ -1,4 +1,4 @@
-## Ejercicios de Base de datos realizados durante el curso
+## Ejercicios de Base de datos realizados durante el curso (Y otros añadidos para mi aprendizaje).
 
 📚 Este repositorio alberga una serie de ejercicios de base de datos desarrollados durante mi curso. Los ejercicios van desde consultas SQL básicas hasta esquemas de bases de datos avanzados.
 

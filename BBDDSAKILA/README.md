@@ -12,3 +12,6 @@ Es importante destacar que el acceso a esta base de datos está restringido al �
 💡Para ejercicios propuestos y resueltos relacionados con Sakila en MySQL, puedes visitar la siguiente página web:
 
 [https://www.discoduroderoer.es/ejercicios-propuestos-y-resueltos-sakila-mysql](https://www.discoduroderoer.es/ejercicios-propuestos-y-resueltos-sakila-mysql)
+
+
+![Sakila Logo](sakila_1.png)

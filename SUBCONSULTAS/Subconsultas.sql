@@ -32,11 +32,10 @@ WHERE precio <= ALL (SELECT precio FROM producto);
 
 SELECT DISTINCT nombre
 FROM fabricante
-WHERE codigo_fabricante IS NOT NULL;
-
+WHERE codigo IN (SELECT codigo_fabricante FROM producto);
 
 --5. Devuelve los nombres de los fabricantes que no tienen productos asociados.
 
---6. Devuelve los nombres de los fabricantes que tienen productos asociados.
-
---Es posible que haya un error de duplicación en las preguntas 5 y 6, ya que ambas parecen ser la misma pregunta.
+SELECT DISTINCT nombre
+FROM fabricante
+WHERE codigo NOT IN (SELECT codigo_fabricante FROM producto);

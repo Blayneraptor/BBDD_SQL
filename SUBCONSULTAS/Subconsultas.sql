@@ -30,9 +30,9 @@ WHERE precio <= ALL (SELECT precio FROM producto);
 
 --4. Devuelve los nombres de los fabricantes que tienen productos asociados.
 
-SELECT nombre
-FROM producto
-WHERE 
+SELECT DISTINCT nombre
+FROM fabricante
+WHERE codigo_fabricante IS NOT NULL;
 
 
 --5. Devuelve los nombres de los fabricantes que no tienen productos asociados.

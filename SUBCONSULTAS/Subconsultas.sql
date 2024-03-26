@@ -16,7 +16,7 @@ HAVING COUNT(*) = (
     )
 );
 
---2. Devuelve el producto más caro que existe en la tabla producto sin hacer uso de MAX, ORDER BY ni LIMIT.
+ --2. Devuelve el producto más caro que existe en la tabla producto sin hacer uso de MAX, ORDER BY ni LIMIT.
 
 SELECT nombre,precio
 FROM producto

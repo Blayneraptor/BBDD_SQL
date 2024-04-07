@@ -29,10 +29,11 @@ SELECT cliente_no
 FROM clientes 
 WHERE cliente_no = (SELECT producto_no FROM productos WHERE descripcion LIKE 'DESTRUCTORA DE PAPEL A3');
 
-
 -- 6. Obtener los vendedores con más de dos clientes.
 
-
+SELECT DISTINCT apellido
+FROM empleados
+WHERE emp_no = (SELECT vendedor_no FROM clientes GROUP BY 1 HAVING count(*)>2 );
 
 -- 7. Conseguir los apellidos y oficios de los empleados del departamento 10 cuyo oficio sea idéntico al de cualquiera de los empleados del departamento de VENTAS.
 

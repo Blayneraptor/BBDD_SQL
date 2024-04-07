@@ -13,7 +13,9 @@ WHERE cliente_no LIKE (SELECT cliente_no FROM clientes WHERE nombre LIKE 'EDICIO
 
 -- 3. Obtener el número, nombre y límite de crédito de los clientes con crédito inferior a la media de los créditos.
 
-
+SELECT cliente_no,nombre,ifnull(limite_credito,0)
+FROM clientes
+WHERE limite_credito <( SELECT AVG (ifnull(limite_credito,0)) FROM clientes );
 
 -- 4. Visualizar los datos del producto más caro.
 

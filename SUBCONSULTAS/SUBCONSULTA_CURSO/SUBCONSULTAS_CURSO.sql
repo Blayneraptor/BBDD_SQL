@@ -19,10 +19,15 @@ WHERE limite_credito <( SELECT AVG (ifnull(limite_credito,0)) FROM clientes );
 
 -- 4. Visualizar los datos del producto más caro.
 
-
+SELECT *
+FROM productos
+WHERE precio_actual = (SELECT MAX(precio_actual) FROM productos);
 
 -- 5. Listar los clientes que han hecho algún pedido de 'DESTRUCTORA DE PAPEL A3'.
 
+SELECT cliente_no
+FROM clientes 
+WHERE cliente_no = (SELECT producto_no FROM productos WHERE descripcion LIKE 'DESTRUCTORA DE PAPEL A3');
 
 
 -- 6. Obtener los vendedores con más de dos clientes.

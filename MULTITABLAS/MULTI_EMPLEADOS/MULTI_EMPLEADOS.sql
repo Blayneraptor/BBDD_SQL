@@ -13,7 +13,10 @@ INNER JOIN departamentos d ON e.DEPT_NO = d.DEPT_NO;
 
 -- 3. Mostrar el nombre del departamento y la media de las comisiones de sus empleados.
 
-
+SELECT d.DNOMBRE AS NOMBRE_DEPARTAMENTO, AVG(e.COMISION) AS MEDIA_COMISIONES
+FROM empleados e
+INNER JOIN departamentos d ON e.DEPT_NO = d.DEPT_NO
+GROUP BY d.DNOMBRE;
 
 -- 4. Mostrar los nombres de los departamentos y el número de empleados de los departamentos que tienen más de dos empleados.
 

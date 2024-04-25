@@ -28,3 +28,8 @@ HAVING COUNT(e.EMP_NO) >=2;
 
 -- 5. Mostrar cuántos empleados hay en cada ciudad de los departamentos.
 
+SELECT COUNT(e.EMP_NO) AS NUMERO_EMPLEADOS, d.CIUDAD
+FROM empleados e
+INNER JOIN departamentos d ON e.DEPT_NO = d.DEPT_NO
+GROUP BY d.CIUDAD;
+

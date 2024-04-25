@@ -6,6 +6,9 @@ INNER JOIN departamentos d  ON e.DEPT_NO = d.DEPT_NO;
 
 -- 2. Mostrar el nombre de cada empleado y la localidad del departamento en el que trabaja.
 
+SELECT e.APELLIDO AS NOMBRE_EMPLEADO, d.CIUDAD AS LOCALIDAD_DEPARTAMENTO
+FROM empleados e
+INNER JOIN departamentos d ON e.DEPT_NO = d.DEPT_NO;
 
 
 -- 3. Mostrar el nombre del departamento y la media de las comisiones de sus empleados.

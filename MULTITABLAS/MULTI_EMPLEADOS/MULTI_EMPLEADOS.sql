@@ -20,7 +20,11 @@ GROUP BY d.DNOMBRE;
 
 -- 4. Mostrar los nombres de los departamentos y el número de empleados de los departamentos que tienen más de dos empleados.
 
-
+SELECT d.DNOMBRE AS NOMBRE_DEPARTAMENTOS, COUNT(e.EMP_NO) AS NUMERO_EMPLEADOSMIN2
+FROM empleados e
+INNER JOIN departamentos d ON e.DEPT_NO = d.DEPT_NO
+GROUP BY d.DNOMBRE
+HAVING COUNT(e.EMP_NO) >=2;
 
 -- 5. Mostrar cuántos empleados hay en cada ciudad de los departamentos.
 

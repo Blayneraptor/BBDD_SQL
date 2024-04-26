@@ -38,6 +38,12 @@ WHERE e.codigo_departamento>=1;
 
 
 -- 6. Devuelve un listado con el código, el nombre del departamento y el valor del presupuesto actual del que dispone, solo de aquellos departamentos que tienen empleados. El valor del presupuesto actual se puede calcular restando al valor del presupuesto inicial (atributo presupuesto) el valor de los gastos que ha generado (atributo gastos).
+
+SELECT DISTINCT d.codigo, d.nombre, d.presupuesto-d.gastos AS PRESUPUESTO_ACTUAL
+FROM departamento d 
+INNER JOIN empleado e ON e.codigo_departamento=d.codigo
+WHERE e.codigo_departamento>=1;
+
 -- 7. Devuelve un listado con los datos de los empleados que trabajan en el departamento de I+D. Ordena el resultado alfabéticamente por apellidos y nombre.
 -- 8. Devuelve un listado con los datos de los empleados que trabajan en el departamento de Sistemas, Contabilidad o I+D. Ordena el resultado alfabéticamente.
 -- 9. Devuelve una lista con el nombre de los empleados que tienen los departamentos que tienen un presupuesto entre 100000 y 200000 euros.

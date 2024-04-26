@@ -16,6 +16,15 @@ WHERE articulos.pvp > 500
 ORDER BY articulos.nombre;
 
 -- 3. Muestra aquellos suministros que tengan un puc mayor a cualquiera de los que tiene el proveedor p11.
+
+SELECT suministros.codp, suministros.coda, suministros.puc
+FROM suministros
+WHERE suministros.puc > (
+    SELECT MAX(suministros.puc)
+    FROM suministros
+    WHERE suministros.codp = 'p11'
+);
+
 -- 4. Calcular cuánto se ha vendido por cada cliente,  reflejando el nombre del cliente y el importe de la venta con el alias total_cliente.
 -- 5. Mostrar para cada artículo, el nombre del artículo y la cantidad total que se ha facturado de ese artículo (ctd de la tabla facturas).
 -- 6. Muestra todos los artículos que no han sido comprados por ningún cliente, ordenados por código de nombre de artículo.

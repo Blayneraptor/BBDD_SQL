@@ -61,4 +61,10 @@ WHERE d.nombre IN ("Sistemas","Contabilidad", "I+D")
 ORDER BY e.nombre; 
 
 -- 9. Devuelve una lista con el nombre de los empleados que tienen los departamentos que tienen un presupuesto entre 100000 y 200000 euros.
+
+SELECT e.nombre, d.nombre,d.presupuesto
+FROM empleado e
+INNER JOIN departamento d ON e.codigo_departamento=d.codigo
+WHERE d.presupuesto BETWEEN 100000 AND 200000;
+
 -- 10. Devuelve un listado con el nombre de los departamentos donde existe algún empleado cuyo segundo apellido sea NULL. Hay que tener en cuenta que no se debe mostrar los nombres de departamentos que estén repetidos.

@@ -45,6 +45,13 @@ INNER JOIN empleado e ON e.codigo_departamento=d.codigo
 WHERE e.codigo_departamento>=1;
 
 -- 7. Devuelve un listado con los datos de los empleados que trabajan en el departamento de I+D. Ordena el resultado alfabéticamente por apellidos y nombre.
+
+SELECT *
+FROM empleado e
+INNER JOIN departamento d ON e.codigo_departamento = d.codigo
+WHERE d.nombre = 'I+D'
+ORDER BY e.apellido1, e.nombre;
+
 -- 8. Devuelve un listado con los datos de los empleados que trabajan en el departamento de Sistemas, Contabilidad o I+D. Ordena el resultado alfabéticamente.
 -- 9. Devuelve una lista con el nombre de los empleados que tienen los departamentos que tienen un presupuesto entre 100000 y 200000 euros.
 -- 10. Devuelve un listado con el nombre de los departamentos donde existe algún empleado cuyo segundo apellido sea NULL. Hay que tener en cuenta que no se debe mostrar los nombres de departamentos que estén repetidos.

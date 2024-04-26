@@ -30,6 +30,13 @@ GROUP BY d.nombre,e.nombre,e.apellido1,e.apellido2;
 
 
 -- 5. Devuelve un listado con el código y el nombre del departamento, de aquellos departamentos que tienen empleados.
+
+SELECT DISTINCT d.codigo, d.nombre AS DEPARTAMENTOS_CON_EMPLEADOS
+FROM departamento d 
+INNER JOIN empleado e ON e.codigo_departamento=d.codigo
+WHERE e.codigo_departamento>=1;
+
+
 -- 6. Devuelve un listado con el código, el nombre del departamento y el valor del presupuesto actual del que dispone, solo de aquellos departamentos que tienen empleados. El valor del presupuesto actual se puede calcular restando al valor del presupuesto inicial (atributo presupuesto) el valor de los gastos que ha generado (atributo gastos).
 -- 7. Devuelve un listado con los datos de los empleados que trabajan en el departamento de I+D. Ordena el resultado alfabéticamente por apellidos y nombre.
 -- 8. Devuelve un listado con los datos de los empleados que trabajan en el departamento de Sistemas, Contabilidad o I+D. Ordena el resultado alfabéticamente.

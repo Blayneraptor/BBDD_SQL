@@ -68,3 +68,8 @@ INNER JOIN departamento d ON e.codigo_departamento=d.codigo
 WHERE d.presupuesto BETWEEN 100000 AND 200000;
 
 -- 10. Devuelve un listado con el nombre de los departamentos donde existe algún empleado cuyo segundo apellido sea NULL. Hay que tener en cuenta que no se debe mostrar los nombres de departamentos que estén repetidos.
+
+SELECT DISTINCT d.nombre, e.apellido2
+FROM departamento d 
+INNER JOIN empleado e ON e.codigo_departamento=d.codigo
+WHERE e.apellido2 IS NULL;

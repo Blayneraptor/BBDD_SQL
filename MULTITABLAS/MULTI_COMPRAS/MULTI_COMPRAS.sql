@@ -26,6 +26,12 @@ WHERE suministros.puc > (
 );
 
 -- 4. Calcular cuánto se ha vendido por cada cliente,  reflejando el nombre del cliente y el importe de la venta con el alias total_cliente.
+
+SELECT clientes.nombre AS nombre_cliente, SUM(facturas.precio) AS total_cliente
+FROM clientes
+JOIN facturas ON clientes.codc = facturas.codc
+GROUP BY clientes.codc;
+
 -- 5. Mostrar para cada artículo, el nombre del artículo y la cantidad total que se ha facturado de ese artículo (ctd de la tabla facturas).
 -- 6. Muestra todos los artículos que no han sido comprados por ningún cliente, ordenados por código de nombre de artículo.
 -- 7. Muestra el nombre del cliente y el nombre del artículo, de aquellos clientes que han comprado artículos suministrados por el proveedor p3

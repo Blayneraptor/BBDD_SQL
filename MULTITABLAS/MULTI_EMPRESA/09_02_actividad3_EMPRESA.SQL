@@ -7,6 +7,13 @@ WHERE nif LIKE "38382980M";
 
 
 -- 2. Devuelve el nombre del departamento donde trabaja el empleado JOSE RUIZ SANTANA.
+
+SELECT d.nombre AS NOMBRE_DEPARTAMENTO, e.nombre, e.apellido1, e.apellido2
+FROM departamento d 
+INNER JOIN empleado e ON e.codigo_departamento = d.codigo
+WHERE e.nombre = "JOSE" AND e.apellido1 = "RUIZ" AND e.apellido2 = "SANTANA";
+
+
 -- 3. Devuelve un listado con el nombre de los empleados y el nombre del departamento donde trabaja cada uno.
 -- 4. Devuelve un listado con el nombre de los empleados y el nombre del departamento donde trabaja cada uno.Ordena el resultado, en primer lugar por el nombre del departamento (en orden alfabético) y en segundo lugar por los apellidos y el nombre de los empleados.
 -- 5. Devuelve un listado con el código y el nombre del departamento, de aquellos departamentos que tienen empleados.

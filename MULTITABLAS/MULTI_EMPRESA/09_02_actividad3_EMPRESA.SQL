@@ -22,6 +22,13 @@ INNER JOIN departamento d ON e.codigo_departamento = d.codigo;
 
 
 -- 4. Devuelve un listado con el nombre de los empleados y el nombre del departamento donde trabaja cada uno.Ordena el resultado, en primer lugar por el nombre del departamento (en orden alfabético) y en segundo lugar por los apellidos y el nombre de los empleados.
+
+SELECT e.nombre AS NOMBRE_EMPLEADO, d.nombre AS NOMBRE_DEPARTAMENTO, e.apellido1, e.apellido2
+FROM empleado e
+INNER JOIN departamento d ON e.codigo_departamento = d.codigo
+GROUP BY d.nombre,e.nombre,e.apellido1,e.apellido2;
+
+
 -- 5. Devuelve un listado con el código y el nombre del departamento, de aquellos departamentos que tienen empleados.
 -- 6. Devuelve un listado con el código, el nombre del departamento y el valor del presupuesto actual del que dispone, solo de aquellos departamentos que tienen empleados. El valor del presupuesto actual se puede calcular restando al valor del presupuesto inicial (atributo presupuesto) el valor de los gastos que ha generado (atributo gastos).
 -- 7. Devuelve un listado con los datos de los empleados que trabajan en el departamento de I+D. Ordena el resultado alfabéticamente por apellidos y nombre.

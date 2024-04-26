@@ -1,17 +1,10 @@
 -- 1. Muestra los nombres de los artículos comprados por “cliente nueve”.
 
-SELECT a.nombre, c.nombre
-FROM articulos a
-JOIN clientes c ON c.codc = a.coda
-JOIN facturas f ON c.codc = a.coda
-WHERE c.nombre="cliente nueve";
-
-SELECT a.nombre AS NOMBRE_ARTICULO, c.nombre AS NOMBRE_CLIENTE
+SELECT articulos.nombre, clientes.nombre
 FROM articulos
-JOIN facturas ON a.coda = f.coda
-JOIN clientes ON f.codc = c.codc
-WHERE c.nombre = 'cliente nueve';
-
+INNER JOIN facturas ON articulos.coda = facturas.coda
+INNER JOIN clientes ON facturas.codc = clientes.codc
+WHERE clientes.nombre LIKE "cliente nueve";
 
 
 -- 2. Muestra el nombre del artículo y el nombre del proveedor que lo suministra (con los alias, Nombre Artículo y Nombre Proveedor respectivamente), de los artículos que tengan un pvp superior a 500, ordenados  por nombre de artículo.
@@ -21,3 +14,4 @@ WHERE c.nombre = 'cliente nueve';
 -- 6. Muestra todos los artículos que no han sido comprados por ningún cliente, ordenados por código de nombre de artículo.
 -- 7. Muestra el nombre del cliente y el nombre del artículo, de aquellos clientes que han comprado artículos suministrados por el proveedor p3
 -- 8. Mostrar el nombre del proveedor y el nombre del artículo de los suministros comprados al "Proveedor tres“.
+

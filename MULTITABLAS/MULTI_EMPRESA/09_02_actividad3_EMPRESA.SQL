@@ -15,6 +15,12 @@ WHERE e.nombre = "JOSE" AND e.apellido1 = "RUIZ" AND e.apellido2 = "SANTANA";
 
 
 -- 3. Devuelve un listado con el nombre de los empleados y el nombre del departamento donde trabaja cada uno.
+
+SELECT e.nombre AS NOMBRE_EMPLEADO, d.nombre AS NOMBRE_DEPARTAMENTO
+FROM empleado e
+INNER JOIN departamento d ON e.codigo_departamento = d.codigo;
+
+
 -- 4. Devuelve un listado con el nombre de los empleados y el nombre del departamento donde trabaja cada uno.Ordena el resultado, en primer lugar por el nombre del departamento (en orden alfabético) y en segundo lugar por los apellidos y el nombre de los empleados.
 -- 5. Devuelve un listado con el código y el nombre del departamento, de aquellos departamentos que tienen empleados.
 -- 6. Devuelve un listado con el código, el nombre del departamento y el valor del presupuesto actual del que dispone, solo de aquellos departamentos que tienen empleados. El valor del presupuesto actual se puede calcular restando al valor del presupuesto inicial (atributo presupuesto) el valor de los gastos que ha generado (atributo gastos).

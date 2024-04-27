@@ -212,13 +212,11 @@ insert into suministros values('p3','A6',500);
 # Realizar estas consultas.
 
 
-1. Devuelve el nombre del departamento donde trabaja el empleado que tiene el nif 38382980M.
-2. Devuelve el nombre del departamento donde trabaja el empleado JOSE RUIZ SANTANA.
-3. Devuelve un listado con el nombre de los empleados y el nombre del departamento donde trabaja cada uno.
-4. Devuelve un listado con el nombre de los empleados y el nombre del departamento donde trabaja cada uno. Ordena el resultado, en primer lugar por el nombre del departamento (en orden alfabético) y en segundo lugar por los apellidos y el nombre de los empleados.
-5. Devuelve un listado con el código y el nombre del departamento, de aquellos departamentos que tienen empleados.
-6. Devuelve un listado con el código, el nombre del departamento y el valor del presupuesto actual del que dispone, solo de aquellos departamentos que tienen empleados. El valor del presupuesto actual se puede calcular restando al valor del presupuesto inicial (atributo presupuesto) el valor de los gastos que ha generado (atributo gastos).
-7. Devuelve un listado con los datos de los empleados que trabajan en el departamento de I+D. Ordena el resultado alfabéticamente por apellidos y nombre.
-8. Devuelve un listado con los datos de los empleados que trabajan en el departamento de Sistemas, Contabilidad o I+D. Ordena el resultado alfabéticamente.
-9. Devuelve una lista con el nombre de los empleados que tienen los departamentos que tienen un presupuesto entre 100000 y 200000 euros.
-10. Devuelve un listado con el nombre de los departamentos donde existe algún empleado cuyo segundo apellido sea NULL. Hay que tener en cuenta que no se debe mostrar los nombres de departamentos que estén repetidos.
+1. Muestra los nombres de los artículos comprados por “cliente nueve”.
+2. Muestra el nombre del artículo y el nombre del proveedor que lo suministra (con los alias, Nombre Artículo y Nombre Proveedor respectivamente), de los artículos que tengan un pvp superior a 500, ordenados por nombre de artículo.
+3. Muestra aquellos suministros que tengan un puc mayor a cualquiera de los que tiene el proveedor p11.
+4. Calcular cuánto se ha vendido por cada cliente, reflejando el nombre del cliente y el importe de la venta con el alias total_cliente.
+5. Mostrar para cada artículo, el nombre del artículo y la cantidad total que se ha facturado de ese artículo (ctd de la tabla facturas).
+6. Muestra todos los artículos que no han sido comprados por ningún cliente, ordenados por código de nombre de artículo.
+7. Muestra el nombre del cliente y el nombre del artículo, de aquellos clientes que han comprado artículos suministrados por el proveedor p3.
+8. Mostrar el nombre del proveedor y el nombre del artículo de los suministros comprados al "Proveedor tres".

@@ -30,12 +30,14 @@ WHERE suministros.puc > (
 
 SELECT clientes.nombre AS nombre_cliente, SUM(facturas.precio) AS total_cliente
 FROM clientes
-JOIN facturas ON clientes.codc = facturas.codc
+INNER JOIN facturas ON clientes.codc = facturas.codc
 GROUP BY clientes.codc;
 
 -- 5. Mostrar para cada artículo, el nombre del artículo y la cantidad total que se ha facturado de ese artículo (ctd de la tabla facturas).
 
-
+SELECT articulos.nombre,facturas.ctd AS total_facturado
+FROM articulos
+INNER JOIN facturas ON facturas.coda = articulos.coda;
 
 -- 6. Muestra todos los artículos que no han sido comprados por ningún cliente, ordenados por código de nombre de artículo.
 -- 7. Muestra el nombre del cliente y el nombre del artículo, de aquellos clientes que han comprado artículos suministrados por el proveedor p3

@@ -40,6 +40,13 @@ FROM articulos
 INNER JOIN facturas ON facturas.coda = articulos.coda;
 
 -- 6. Muestra todos los artículos que no han sido comprados por ningún cliente, ordenados por código de nombre de artículo.
+
+SELECT articulos.nombre
+FROM articulos
+LEFT JOIN facturas ON facturas.coda = articulos.coda
+WHERE facturas.coda IS NULL
+ORDER BY articulos.coda;
+
 -- 7. Muestra el nombre del cliente y el nombre del artículo, de aquellos clientes que han comprado artículos suministrados por el proveedor p3
 -- 8. Mostrar el nombre del proveedor y el nombre del artículo de los suministros comprados al "Proveedor tres“.
 

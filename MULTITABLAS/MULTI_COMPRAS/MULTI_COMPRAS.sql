@@ -59,3 +59,8 @@ WHERE proveedores.codp = "p3";
 
 -- 8. Mostrar el nombre del proveedor y el nombre del artículo de los suministros comprados al "Proveedor tres“.
 
+SELECT proveedores.nombre AS Nombre_proveedor, articulos.nombre AS Articulo_nombre
+FROM proveedores
+INNER JOIN suministros ON suministros.codp = proveedores.codp
+INNER JOIN articulos ON articulos.coda = suministros.coda
+WHERE proveedores.nombre = "Proveedor tres";

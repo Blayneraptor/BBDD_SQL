@@ -48,5 +48,14 @@ WHERE facturas.coda IS NULL
 ORDER BY articulos.coda;
 
 -- 7. Muestra el nombre del cliente y el nombre del artículo, de aquellos clientes que han comprado artículos suministrados por el proveedor p3
+
+SELECT clientes.nombre AS Cliente_nombre , articulos.nombre AS Articulo_nombre
+FROM clientes
+INNER JOIN facturas ON facturas.codc = clientes.codc
+INNER JOIN articulos ON articulos.coda = facturas.coda
+INNER JOIN suministros ON articulos.coda = suministros.coda
+INNER JOIN proveedores ON suministros.codp = proveedores.codp
+WHERE proveedores.codp = "p3";
+
 -- 8. Mostrar el nombre del proveedor y el nombre del artículo de los suministros comprados al "Proveedor tres“.
 

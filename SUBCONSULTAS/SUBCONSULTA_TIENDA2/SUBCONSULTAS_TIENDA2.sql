@@ -81,7 +81,26 @@ HAVING COUNT(p.id) = (
 
 SELECT nombre 
 FROM fabricante
-WHERE id IN (SELECT id_fabricante FROM producto GROUP BY id_fabricante);
+WHERE id IN 
+    (SELECT id_fabricante 
+    FROM producto 
+    GROUP BY id_fabricante);
 
 -- 8. Fabricantes sin productos asociados (utilizando IN o NOT IN).
+
+SELECT nombre 
+FROM fabricante
+WHERE id NOT IN 
+    (SELECT id_fabricante 
+    FROM producto 
+    GROUP BY id_fabricante);
+
 -- 9. Fabricantes sin productos asociados (utilizando EXISTS o NOT EXISTS).
+
+SELECT nombre 
+FROM fabricante
+WHERE NOT EXISTS (
+    SELECT 1 
+    FROM producto 
+    WHERE producto.id_fabricante = fabricante.id
+);

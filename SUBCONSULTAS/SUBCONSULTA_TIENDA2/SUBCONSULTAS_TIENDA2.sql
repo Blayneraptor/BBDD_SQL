@@ -79,7 +79,9 @@ HAVING COUNT(p.id) = (
 
 -- 7. Fabricantes con productos asociados (utilizando ALL o ANY).
 
-
+SELECT nombre 
+FROM fabricante
+WHERE id IN (SELECT id_fabricante FROM producto GROUP BY id_fabricante);
 
 -- 8. Fabricantes sin productos asociados (utilizando IN o NOT IN).
 -- 9. Fabricantes sin productos asociados (utilizando EXISTS o NOT EXISTS).

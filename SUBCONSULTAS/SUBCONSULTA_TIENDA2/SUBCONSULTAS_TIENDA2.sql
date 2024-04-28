@@ -56,8 +56,30 @@ WHERE p.id_fabricante = (
         FROM producto 
         WHERE id_fabricante = p.id_fabricante);
 
-
 -- 6. Fabricantes con el mismo número de productos que Lenovo (usando subconsultas en la cláusula HAVING).
+
+SELECT f.nombre, COUNT(p.id) AS cantidad_productos
+FROM producto p
+JOIN fabricante f ON p.id_fabricante = f.id
+WHERE p.id_fabricante != (
+    SELECT id
+    FROM fabricante
+    WHERE nombre = 'Lenovo'
+)
+GROUP BY p.id_fabricante
+HAVING COUNT(p.id) = (
+    SELECT COUNT(id)
+    FROM producto
+    WHERE id_fabricante = (
+        SELECT id
+        FROM fabricante
+        WHERE nombre = 'Lenovo'
+    )
+);
+
 -- 7. Fabricantes con productos asociados (utilizando ALL o ANY).
+
+
+
 -- 8. Fabricantes sin productos asociados (utilizando IN o NOT IN).
 -- 9. Fabricantes sin productos asociados (utilizando EXISTS o NOT EXISTS).

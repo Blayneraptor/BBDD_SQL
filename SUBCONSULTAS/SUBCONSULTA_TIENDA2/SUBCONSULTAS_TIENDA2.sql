@@ -1,14 +1,14 @@
 -- 1. Productos con el mismo precio que el producto más caro de Lenovo.
 
-SELECT *
-FROM producto
-WHERE precio = (SELECT MAX(precio) FROM producto WHERE id_fabricante = (SELECT id FROM fabricante WHERE nombre = 'Lenovo'));
+SELECT nombre,max(precio)
+FROM producto 
+WHERE id_fabricante IN (SELECT nombre FROM fabricante WHERE nombre LIKE "Lenovo");
 
 -- 2. Nombre del producto más caro de Lenovo.
 
-SELECT * 
+SELECT *
 FROM producto
-WHERE 
+WHERE precio = (SELECT MAX(precio) FROM producto WHERE id_fabricante = (SELECT id FROM fabricante WHERE nombre = 'Lenovo'));
 
 -- 3. Nombre del producto más barato de Hewlett-Packard.
 -- 4. Productos con precio mayor o igual al producto más caro de Lenovo.

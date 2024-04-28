@@ -11,7 +11,25 @@ FROM producto
 WHERE precio = (SELECT MAX(precio) FROM producto WHERE id_fabricante = (SELECT id FROM fabricante WHERE nombre = 'Lenovo'));
 
 -- 3. Nombre del producto más barato de Hewlett-Packard.
+
+SELECT nombre,min(precio)
+FROM producto
+WHERE id_fabricante IN (SELECT id FROM fabricante WHERE nombre = "Hewlett-Packard");
+
 -- 4. Productos con precio mayor o igual al producto más caro de Lenovo.
+
+SELECT *
+FROM producto
+WHERE precio >= (
+    SELECT MAX(precio)
+    FROM producto
+    WHERE id_fabricante = (
+        SELECT id
+        FROM fabricante
+        WHERE nombre = 'Lenovo'
+    )
+);
+
 -- 5. Productos de Asus con precio superior al precio medio de todos sus productos.
 -- 6. Fabricantes con el mismo número de productos que Lenovo (usando subconsultas en la cláusula HAVING).
 -- 7. Fabricantes con productos asociados (utilizando ALL o ANY).

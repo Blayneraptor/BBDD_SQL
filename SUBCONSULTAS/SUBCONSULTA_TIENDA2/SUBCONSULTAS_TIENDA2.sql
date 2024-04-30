@@ -104,3 +104,4 @@ WHERE NOT EXISTS (
     FROM producto 
     WHERE producto.id_fabricante = fabricante.id
 );
+

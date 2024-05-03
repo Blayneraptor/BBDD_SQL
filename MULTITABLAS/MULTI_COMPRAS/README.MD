@@ -146,7 +146,7 @@ insert into clientes values('C15','0123456715','cliente quince','c/ cquince, 15'
 
 /*--FACTURAS--*/
 
-insert into facturas values('1',10,'20121302','350','A1','C1');
+insert into facturas values('1',10,'20121202','350','A1','C1');
 insert into facturas values('2',21,'20120412','550','A2','C7');
 insert into facturas values('3',80,'20120412','1000','A1','C1');
 insert into facturas values('4',23,'20120412','550','A3','C2');

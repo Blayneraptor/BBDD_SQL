@@ -9,4 +9,4 @@
 
 ## Contenido
 
-Encontrarás scripts SQL, esquemas de bases de datos, y ejercicios variados, cada uno en su respectiva carpeta según el tema tratado.
+Encontrarás scripts SQL, esquemas de bases de datos, procedimientos, y ejercicios variados, cada uno en su respectiva carpeta según el tema tratado.
